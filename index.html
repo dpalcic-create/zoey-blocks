@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Zoey Blocks">
+<meta name="theme-color" content="#1d1440"><title>Zoey Blocks</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css"></head><body>
+<div id="app">
+ <section id="title" class="screen active">
+  <h1><span>Zoey</span>Blocks</h1>
+  <div class="hero"><img src="zoey.jpg" alt="Zoey"><div class="woof">Stack 'em up!</div></div>
+  <button class="big" id="resumeBtn" hidden>Resume game</button>
+  <button class="big" id="playBtn">New game</button>
+  <div class="row"><button class="mid" id="scoresBtn">High scores</button><button class="mid" id="setBtn">Settings</button></div>
+  <p class="sub" id="best">Best: 0</p>
+ </section>
+ <section id="game" class="screen">
+  <header class="hud">
+   <button class="ico" id="pauseBtn" aria-label="Pause">❚❚</button>
+   <div class="box"><small>Score</small><b id="hScore">0</b></div>
+   <div class="box"><small>Level</small><b id="hLevel">1</b></div>
+   <div class="box"><small>Lines</small><b id="hLines">0</b></div>
+  </header>
+  <div id="playArea">
+   <div class="side left"><small>HOLD</small><canvas id="holdC"></canvas>
+     <img class="avatar" id="avatar" src="zoey-face.jpg" alt=""></div>
+   <div id="wellWrap"><canvas id="well"></canvas><div id="popup"></div></div>
+   <div class="side right"><small>NEXT</small><canvas id="nextC"></canvas></div>
+  </div>
+  <div id="cheer"><img src="zoey-face.jpg" alt=""><span id="cheerTxt">Woof!</span></div>
+  <div id="pad">
+   <div class="prow"><button data-a="hold">Hold</button><button data-a="ccw">⟲</button><button data-a="cw">⟳</button><button data-a="hard">Drop</button></div>
+   <div class="prow"><button data-a="left" class="rep">◀</button><button data-a="soft" class="rep">▼</button><button data-a="right" class="rep">▶</button></div>
+  </div>
+  <div class="hint" id="hint">Swipe ◀▶ move · tap rotate · swipe ▼ soft · flick ▼ drop · swipe ▲ hold</div>
+ </section>
+ <div id="overlay" class="ov"><div class="card" id="card"></div></div>
+</div>
+<script src="app.js"></script></body></html>
